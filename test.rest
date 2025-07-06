@@ -1,0 +1,41 @@
+### Register a new user
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "testuser@example.com",
+  "password": "testpassword"
+}
+
+### Login
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "testuser@example.com",
+  "password": "testpassword"
+}
+
+### Get smart budget tips (POST, requires spendingData in body)
+POST http://localhost:3000/api/analytics/tips
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWNycjRlOGgwMDAwMWpnMXZlYjltMGFsIiwiaWF0IjoxNzUxODEyMjk0LCJleHAiOjE3NTE4OTg2OTR9.12ltuNmo8uw858ZyuvURdVR0uge5HeahSzYZwwWBpaI
+
+{
+  "spendingData": "{\"expenses\":[{\"category\":\"food\",\"amount\":120},{\"category\":\"rent\",\"amount\":800}]}"
+}
+
+
+### Get all budgets (replace with actual endpoint if needed)
+GET http://localhost:3000/api/budget
+
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWNycjRlOGgwMDAwMWpnMXZlYjltMGFsIiwiaWF0IjoxNzUxODEyMjk0LCJleHAiOjE3NTE4OTg2OTR9.12ltuNmo8uw858ZyuvURdVR0uge5HeahSzYZwwWBpaI
+
+
+### Get all expenses (replace with actual endpoint if needed)
+GET http://localhost:3000/api/expense
+
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWNycjRlOGgwMDAwMWpnMXZlYjltMGFsIiwiaWF0IjoxNzUxODEyMjk0LCJleHAiOjE3NTE4OTg2OTR9.12ltuNmo8uw858ZyuvURdVR0uge5HeahSzYZwwWBpaI
